@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+body{
+	background-color:#2B2B2B;
+}
+#button li a {
+font-family: Arial;
+font-size:20px;
+text-decoration: none;
+float:left;
+padding: 10px;
+background-color: #2175bc;
+color: #fff;
+}
+#button li {
+display: inline;
+}
+#button {
+	margin-top:10%;
+	width:25%;
+	margin-left:45%;
+padding: 0;
+}
