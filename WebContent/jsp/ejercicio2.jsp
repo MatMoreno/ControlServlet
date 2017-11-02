@@ -18,6 +18,8 @@
                 <input type="text"  placeholder="usuario" name="usuario" id="usuario" required>
                 <input type="password"  placeholder="contraseña" name="contra" id="contra" required>
                 <button  type="submit">Login</button><label style="display:inline;margin-left: 5px; "></label>
+                <input type="button" style="background-color:white;cursor:pointer; margin-left:10%;margin-top:10%;font-size: 30px;" name="volver" value="Volver al menu" onClick="window.location.href='<%=baseJsp%>'">
+                
             </form>
             <%}else{ %>
             <h1>LOGUEADO CON EXITO</h1>

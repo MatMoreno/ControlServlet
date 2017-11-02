@@ -1,6 +1,8 @@
 package controlador;
 
 import modelo.Usuario;
+
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -59,6 +61,9 @@ public class Servlet extends HttpServlet {
 		if (action != null) {
 			switch (action) {
 			case "irEjercicio1":
+            ArrayList<String> arrayL=arrayListUrls();
+            System.out.println(arrayL);
+            sesion.setAttribute("arrayL", arrayL);
 				url = base + "ejercicio1.jsp";
 				break;
 			case "cerrarSesion":
@@ -84,6 +89,17 @@ public class Servlet extends HttpServlet {
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 
+	}
+	public ArrayList<String> arrayListUrls(){
+		ArrayList<String> lista=new ArrayList<>();
+		lista.add("https://www.google.es/");
+		lista.add("https://www.youtube.com");
+		lista.add("https://www.facebook.com");
+		lista.add("https://www.twitter.com");
+		lista.add("https://www.marca.com");
+		System.out.println(lista);
+		return lista;
+		
 	}
 
 	public boolean login(HttpServletRequest request) {
